@@ -10,10 +10,10 @@ int main(int ac, char **av)
         res = av[1][i];
 
         if(res >= 'a' && res <= 'z')
-            res = 'z' - (c - 'a');
+            res = 'z' - (res - 'a');
 
         if(res >= 'A' &&res <= 'A')
-            res = 'Z' - (c - 'A');
+            res = 'Z' - (res - 'A');
 
         write(1,&res,1);
         i++;
