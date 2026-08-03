@@ -6,3 +6,9 @@ int	ft_strlen(char *str)
         len++;
     return(len);
 }
+#include <stdio.h>
+int	main(void)
+{
+	printf("%d\n", ft_strlen("Hello"));
+	return (0);
+}
