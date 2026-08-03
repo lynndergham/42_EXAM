@@ -13,7 +13,7 @@ int main(int ac, char **av)
         if(av[1][i] >= 'A' && av[1][i] <= 'A')
             res = 'Z' - (c - 'A');
 
-        write(1,&c,1);
+        write(1,&res,1);
         i++;
     }
     write(1, "\n",1);
