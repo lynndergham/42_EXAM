@@ -7,9 +7,9 @@ int main(int ac, char **av)
 
     if(ac == 3)
     {
-        while(av[1][i] && av[1][j])
+        while(av[1][i] && av[2][j])
         {
-            if(av[1][i] == av[1][j])
+            if(av[1][i] == av[2][j])
                 i++;
             j++;
         }
@@ -20,5 +20,6 @@ int main(int ac, char **av)
             write(1,"0\n",2);
 
     }
-    write(1,"\n",1);
+    else
+        write(1,"\n",1);
 }
