@@ -7,10 +7,12 @@ int main(int ac, char **av)
     char res;
     while(ac == 2)
     {
-        if(av[1][i] >= 'a' && av[1][i] <= 'z')
+        res = av[1][i];
+
+        if(res >= 'a' && res <= 'z')
             res = 'z' - (c - 'a');
 
-        if(av[1][i] >= 'A' && av[1][i] <= 'A')
+        if(res >= 'A' &&res <= 'A')
             res = 'Z' - (c - 'A');
 
         write(1,&res,1);
