@@ -6,9 +6,11 @@ t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
     int tmp;
     t_list *start;
 
+     start = lst;
+     
     while(lst)
     {
-        start = lst;
+       
         if(lst->next && !cmp(lst->data,lst->next->data))
         {
             tmp = lst->data;
