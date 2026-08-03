@@ -20,7 +20,8 @@ int main(int ac, char **av)
         write(1,&res,1);
         i++; 
         }
-        write(1, "\n",1);
+       
     }
+     write(1, "\n",1);
     
 }
