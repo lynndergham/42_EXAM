@@ -33,3 +33,39 @@ int	main(int ac, char **av)
 		i++;
 	}
 }
+
+int put_nbr(int c)
+{
+    char c;
+
+    if (n >= 10)
+       put_nbr(n/10);
+    c = n % 10 + '0';
+    write(1,&c,1);
+
+}
+
+int main(int ac , char **av)
+{
+    int i = 0;
+    int n = 0;
+
+    if(ac !=2)
+        return(write(1,"\n",1),0);
+
+        while(av[1][i])
+            n = n * 10 + av[1][i++] - '0';
+
+        i = 1;
+
+        while( i <= 9)
+        {
+            put_nbr(i);
+            write(1, " x ",3);
+            put_nbr(n);
+            write(1, " = ", 3 );
+            put_nbr(i * n);
+            write(1,"\n",1);
+            i++;
+        }
+}
