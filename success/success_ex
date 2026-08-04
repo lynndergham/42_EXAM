@@ -4,3 +4,6 @@ sort_list
 search_and_replace
 swap_bits
 pgcd
+rev_print
+ft_atoi
+tab_mult
