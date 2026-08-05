@@ -7,3 +7,8 @@ pgcd
 rev_print
 ft_atoi
 tab_mult
+rostring
+rostring
+rev_print
+ft_atoi
+paramsum

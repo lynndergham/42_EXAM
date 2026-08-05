@@ -23,7 +23,7 @@ int main(int ac, char **av)
                 if(c == 'Z')
                     c = 'A';
                 write(1,&c,1);
-                i++
+                i++;
        }
     }
     write(1,"\n",1);

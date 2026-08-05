@@ -3,43 +3,79 @@
 #                                                         :::      ::::::::    #
 #    tester.sh                                          :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jkulka <jkulka@student.42heilbronn.de >    +#+  +:+       +#+         #
+#    By: jcluzet <jcluzet@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/07 00:45:37 by pandalaf          #+#    #+#              #
-#    Updated: 2023/10/06 10:27:47 by jkulka           ###   ########.fr        #
+#    Created: 2021/06/20 02:26:11 by jcluzet           #+#    #+#              #
+#    Updated: 2022/09/01 23:43:00 by jcluzet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FILE='rostring.c'
-ASSIGN='rostring'
+FILE='rotone.c'
+ASSIGN='rotone'
 
-bash .system/auto_correc_program.sh $FILE $ASSIGN "abc   "
+bash .system/auto_correc_program.sh $FILE $ASSIGN 
 if [ -e .system/grading/traceback ];then
-	mv .system/grading/traceback .
+    mv .system/grading/traceback .
 	exit 1
 fi
 
-bash .system/auto_correc_program.sh $FILE $ASSIGN "Que la      lumiere soit et la lumiere fut"
+bash .system/auto_correc_program.sh $FILE $ASSIGN "Les stagiaires du staff ne sentent pas toujours tres bon."
 if [ -e .system/grading/traceback ];then
-	mv .system/grading/traceback .
+    mv .system/grading/traceback .
 	exit 1
 fi
 
-bash .system/auto_correc_program.sh $FILE $ASSIGN "     AkjhZ zLKIJz , 23y"
+bash .system/auto_correc_program.sh $FILE $ASSIGN "AkjhZ zLKIJz , 23y "
 if [ -e .system/grading/traceback ];then
-	mv .system/grading/traceback .
+    mv .system/grading/traceback .
 	exit 1
 fi
 
-bash .system/auto_correc_program.sh $FILE $ASSIGN "first" "2" "11000000"
+bash .system/auto_correc_program.sh $FILE $ASSIGN "FOR PONY"
 if [ -e .system/grading/traceback ];then
-	mv .system/grading/traceback .
+    mv .system/grading/traceback .
 	exit 1
 fi
 
-bash .system/auto_correc_program.sh $FILE $ASSIGN "This is a test "
+bash .system/auto_correc_program.sh $FILE $ASSIGN "this        ...       is sparta, then again, maybe    not"
 if [ -e .system/grading/traceback ];then
-	mv .system/grading/traceback .
+    mv .system/grading/traceback .
+	exit 1
+fi
+
+bash .system/auto_correc_program.sh $FILE $ASSIGN "   "
+if [ -e .system/grading/traceback ];then
+    mv .system/grading/traceback .
+	exit 1
+fi
+
+bash .system/auto_correc_program.sh $FILE $ASSIGN "a" "b"
+if [ -e .system/grading/traceback ];then
+    mv .system/grading/traceback .
+	exit 1
+fi
+
+bash .system/auto_correc_program.sh $FILE $ASSIGN "  lorem,ipsum  "
+if [ -e .system/grading/traceback ];then
+    mv .system/grading/traceback .
+	exit 1
+fi
+
+bash .system/auto_correc_program.sh $FILE $ASSIGN "Alex."
+if [ -e .system/grading/traceback ];then
+    mv .system/grading/traceback .
+	exit 1
+fi
+
+bash .system/auto_correc_program.sh $FILE $ASSIGN "abacadaba 42!"
+if [ -e .system/grading/traceback ];then
+    mv .system/grading/traceback .
+	exit 1
+fi
+
+bash .system/auto_correc_program.sh $FILE $ASSIGN ""
+if [ -e .system/grading/traceback ];then
+    mv .system/grading/traceback .
 	exit 1
 fi
 

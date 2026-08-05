@@ -1,0 +1,14 @@
+----------------8<-------------[ START TEST 
+        💻 TEST
+./a.out 
+        🔎 YOUR OUTPUT:
+../../rendu/rotone/rotone.c: In function ‘main’:
+../../rendu/rotone/rotone.c:26:20: error: expected ‘;’ before ‘}’ token
+   26 |                 i++
+      |                    ^
+      |                    ;
+   27 |        }
+      |        ~            
+
+        ❌ COMPILATION ERROR
+----------------8<------------- END TEST ]
