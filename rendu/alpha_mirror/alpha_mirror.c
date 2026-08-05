@@ -11,9 +11,9 @@ int main(int ac, char **av)
         while(av[1][i])
         {
             if(c >= 'a' && c <= 'z')
-                c = z -(c - 'a');
+                c = 'z' -(c - 'a');
             else if(c >= 'A' && c <= 'Z')
-                c = z - (c - 'A');
+                c = 'z' - (c - 'A');
             write(1,&c,1);
             i++;
         }
