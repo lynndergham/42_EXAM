@@ -1,22 +1,26 @@
 #include <unistd.h>
-int main(int argc, char **argv)
-{
-    if(argc == 2)
-    {
-        int i = 0;
-        while(argv[1][i])
-        {
-            char c;
-            c = argv[1][i];
-            if(c >= 'a' && c <= 'z')
-                c = 'z' - (c - 'a');
-            else if ( c>= 'A' && c <= 'Z')
-                c = 'Z' - (c - 'A');
-            write(1, &c, 1);
-            i++;
+#include <stdio.h>
+#include <stdlib.h>
 
-        }
-    }
-    write(1, "\n",1);
-    return (0);
+int do_op(int a, char op, int b)
+{
+    int res = 0;
+
+    if(op == '*')
+        res = a * b;
+    else if(op == '+')
+        res = a + b;
+    else if(op == '-')
+        res = a - b;
+    else if(op == '/')
+        res = a/ b;
+    else if(op == '%')
+        res = a % b;
+    return(res);
+}
+int main(int ac, char **av)
+{
+    if(ac == 4)
+        printf("%i",do_op( atoi(av[1]), av[2][0] , atoi(av[3])));
+    print("\n");
 }
