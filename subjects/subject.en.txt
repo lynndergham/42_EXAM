@@ -1,5 +1,5 @@
 Assignment name  : rotone
-Expected files   : \
+Expected files   : rotone.c
 Allowed functions: write
 --------------------------------------------------------------------------------
 

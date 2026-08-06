@@ -1,27 +1,26 @@
 #include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
+int do_op(int a, char op, int b)
+{
+    int res = 0;
+
+    if(op == '*')
+        res = a * b;
+    else if(op == '+')
+        res = a + b;
+    else if(op == '-')
+        res = a - b;
+    else if(op == '/')
+        res = a/ b;
+    else if(op == '%')
+        res = a % b;
+    return(res);
+}
 int main(int ac, char **av)
 {
-    int i = 0;
-
-    char res;
-    if(ac == 2)
-    {
-        while(av[1][i])
-        {
-        res = av[1][i];
-
-        if(res >= 'a' && res <= 'z')
-            res = 'z' - (res - 'a');
-
-        if(res >= 'A' &&res <= 'Z')
-            res = 'Z' - (res - 'A');
-
-        write(1,&res,1);
-        i++; 
-        }
-       
-    }
-     write(1, "\n",1);
-    
+    if(ac == 4)
+        printf("%i",do_op( atoi(av[1]), av[2][0] , atoi(av[3])));
+    print("\n");
 }

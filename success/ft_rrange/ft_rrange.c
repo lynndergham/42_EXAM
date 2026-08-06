@@ -19,3 +19,25 @@ int     *ft_rrange(int start, int end)
     }
     return (range);
 }
+
+int     *ft_rrange(int start, int end)
+{
+    int *rang;
+    int i = 0;
+
+    if(start >= end)
+        return(NULL);
+
+    range = (int *)malloc(sizeof(int) * (end - start));
+
+    if(!range)
+        return(NULL);
+
+    while(end >= start)
+    {
+        range[i] = end;
+        end --;
+        i++;
+    }
+    return(range);
+}

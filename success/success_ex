@@ -12,3 +12,6 @@ rostring
 rev_print
 ft_atoi
 paramsum
+rotone
+alpha_mirror
+ft_rrange
